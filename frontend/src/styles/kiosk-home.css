@@ -1,0 +1,137 @@
+@layer components {
+  .vk-root {
+    /* white clinical background */
+    @apply min-h-screen flex items-center justify-center p-6
+    bg-gradient-to-b from-slate-50 to-white;
+  }
+
+  .vk-frame {
+    @apply w-full max-w-5xl;
+  }
+
+  .vk-card {
+    /* big rounded kiosk card */
+    @apply grid grid-cols-1 md:grid-cols-2 overflow-hidden
+    rounded-[2.5rem] bg-white border border-slate-200 shadow-xl;
+    /* prevent “flat” look */
+    min-height: 420px;
+  }
+
+  /* LEFT */
+  .vk-left {
+    @apply relative p-10 md:p-12;
+  }
+
+  .vk-badge {
+    /* same badge placement & feel */
+    @apply h-14 w-14 rounded-2xl
+    border border-slate-200 bg-white
+    flex items-center justify-center shadow-sm;
+  }
+
+  .vk-badge-dot {
+    @apply h-4 w-4 rounded-full bg-blue-600;
+  }
+
+  .vk-titleblock {
+    @apply mt-8;
+  }
+
+  .vk-title {
+    @apply text-4xl md:text-5xl tracking-tight text-slate-900;
+  }
+
+  .vk-title--bold {
+    @apply font-extrabold;
+  }
+
+  .vk-subtitle {
+    @apply mt-3 text-xs md:text-sm tracking-[0.22em] text-slate-500;
+  }
+
+  .vk-meta {
+    @apply mt-6 text-sm text-slate-600 flex items-center gap-2 flex-wrap;
+  }
+
+  .vk-meta-sep {
+    @apply text-slate-300;
+  }
+
+  /* thin horizontal line inside left (same as ref vibe) */
+  .vk-line {
+    @apply absolute left-10 right-10 bottom-10 h-px bg-slate-200;
+  }
+
+  /* RIGHT */
+  .vk-right {
+    /* center divider line like ref */
+    @apply relative p-10 md:p-12
+    border-t md:border-t-0 md:border-l border-slate-200
+    flex flex-col justify-between;
+  }
+
+  .vk-right-top {
+    /* keep hint + button centered like ref */
+    @apply flex-1 flex flex-col items-center justify-center;
+  }
+
+  .vk-hint {
+    @apply text-xs tracking-[0.25em] text-slate-500;
+  }
+
+  /* START BUTTON (compact pill like reference) */
+  .vk-start {
+    @apply mt-4 inline-flex items-center justify-center gap-3
+  rounded-2xl px-10 py-4
+  text-white font-semibold tracking-wide
+  active:scale-[0.99] transition select-none;
+
+    position: relative;
+
+    /* fixed compact width */
+    width: 260px;
+    min-width: 260px;
+    max-width: 260px;
+
+    /* blue gradient like reference */
+    background: linear-gradient(
+      135deg,
+      #1e3a8a 0%,
+      /* blue-900 */ #2563eb 50%,
+      /* blue-600 */ #3b82f6 100% /* blue-500 */
+    );
+
+    box-shadow:
+      0 12px 24px rgba(37, 99, 235, 0.35),
+      0 4px 10px rgba(37, 99, 235, 0.25);
+  }
+
+  .vk-start:hover {
+    filter: brightness(1.05);
+  }
+
+  .vk-start:focus-visible {
+    @apply outline-none ring-4 ring-blue-200;
+  }
+
+  .vk-start-icon {
+    @apply text-white;
+    transform: translateY(-0.5px);
+  }
+
+  .vk-right-bottom {
+    @apply flex items-end justify-center md:justify-center;
+  }
+
+  .vk-status {
+    @apply inline-flex items-center gap-2 text-sm;
+  }
+
+  .vk-status-dot {
+    @apply h-2.5 w-2.5 rounded-full bg-emerald-500;
+  }
+
+  .vk-status-text {
+    @apply text-slate-500;
+  }
+}
