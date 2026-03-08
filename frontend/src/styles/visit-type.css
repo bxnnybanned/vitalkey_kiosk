@@ -1,0 +1,93 @@
+@layer components {
+  .vt-root {
+    @apply min-h-screen flex items-center justify-center p-6;
+    background:
+      radial-gradient(900px 320px at 10% 8%, #dbeafe 0%, transparent 65%),
+      radial-gradient(1000px 360px at 90% 92%, #ccfbf1 0%, transparent 68%),
+      linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  }
+
+  .vt-frame {
+    @apply w-full max-w-md;
+  }
+
+  .vt-card {
+    @apply rounded-[2rem] border border-white/80 bg-white/90 p-8 shadow-[0_35px_80px_-42px_rgba(15,23,42,0.35)] backdrop-blur;
+  }
+
+  .vt-icon {
+    @apply mx-auto h-16 w-16 rounded-2xl border border-blue-200/80 flex items-center justify-center shadow-inner;
+    background: linear-gradient(145deg, #eff6ff 0%, #dbeafe 100%);
+  }
+
+  .vt-icon-dot {
+    @apply h-4 w-4 rounded-full border-2 border-blue-600;
+  }
+
+  .vt-title {
+    @apply mt-6 text-center text-4xl font-extrabold tracking-tight text-slate-900;
+    font-size: clamp(1.6rem, 3.5vw, 2rem);
+    line-height: 1.12;
+  }
+
+  .vt-subtitle {
+    @apply mt-2 text-center text-base font-medium text-slate-500;
+  }
+
+  .vt-actions {
+    @apply mt-7 flex flex-col gap-4;
+  }
+
+  .vt-btn {
+    @apply w-full rounded-2xl border px-5 py-4 text-left transition duration-200;
+    @apply flex items-center gap-4;
+    @apply hover:-translate-y-0.5;
+  }
+
+  .vt-btn-mark {
+    @apply inline-flex h-11 min-w-11 items-center justify-center rounded-xl px-2 text-sm font-bold;
+  }
+
+  .vt-btn-copy {
+    @apply flex flex-col;
+  }
+
+  .vt-btn-title {
+    @apply text-2xl font-extrabold leading-tight;
+    font-size: clamp(1.05rem, 2.3vw, 1.25rem);
+  }
+
+  .vt-btn-sub {
+    @apply mt-1 text-sm;
+  }
+
+  .vt-btn-primary {
+    @apply border-blue-500/60 text-white shadow-[0_16px_28px_-20px_rgba(37,99,235,0.9)] hover:brightness-105;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  }
+
+  .vt-btn-primary .vt-btn-mark {
+    @apply bg-blue-300/40 text-white backdrop-blur;
+  }
+
+  .vt-btn-primary .vt-btn-sub {
+    @apply text-blue-100;
+  }
+
+  .vt-btn-secondary {
+    @apply border-slate-200/90 bg-slate-50/80 text-slate-900 shadow-[0_12px_24px_-22px_rgba(15,23,42,0.5)] hover:bg-white;
+  }
+
+  .vt-btn-secondary .vt-btn-mark {
+    @apply bg-slate-200/80 text-slate-700;
+  }
+
+  .vt-btn-secondary .vt-btn-sub {
+    @apply text-slate-500;
+  }
+
+  .vt-back {
+    @apply mt-1 w-full rounded-2xl border border-slate-200/90 bg-white/90 px-5 py-3 text-center text-base font-bold text-slate-700 transition;
+    @apply shadow-[0_10px_22px_-22px_rgba(15,23,42,0.45)] hover:bg-slate-50;
+  }
+}

@@ -39,14 +39,13 @@ export default function PatientRegistration() {
     if (!canSubmit) return;
 
     localStorage.setItem("vk_patient", JSON.stringify(form));
-    navigate("/measure"); // next step (pwede mo palitan later)
+    navigate("/measure");
   }
 
   return (
     <div className="pr-root">
       <div className="pr-frame">
         <div className="pr-card">
-          {/* Top bar */}
           <header className="pr-topbar">
             <div className="pr-brand">
               <span className="pr-brand-dot" aria-hidden="true" />
@@ -63,18 +62,14 @@ export default function PatientRegistration() {
             </div>
           </header>
 
-          {/* Body */}
           <main className="pr-body">
-            {/* Left */}
             <section className="pr-left">
               <div className="pr-icon" aria-hidden="true">
-                🧾
+                ID
               </div>
 
               <h1 className="pr-left-title">Fill Up Your Details</h1>
-              <p className="pr-left-sub">
-                Enter your basic information to get started.
-              </p>
+              <p className="pr-left-sub">Enter your basic information to get started.</p>
 
               <div className="pr-pill">
                 <span className="pr-pill-dot" aria-hidden="true" />
@@ -83,17 +78,11 @@ export default function PatientRegistration() {
 
               <p className="pr-note">Data privacy consent confirmed.</p>
 
-              <button
-                className="pr-submit"
-                type="submit"
-                form="pr-form"
-                disabled={!canSubmit}
-              >
-                Submit &amp; Start <span aria-hidden="true">→</span>
+              <button className="pr-submit" type="submit" form="pr-form" disabled={!canSubmit}>
+                Submit &amp; Start
               </button>
             </section>
 
-            {/* Right */}
             <section className="pr-right">
               <form id="pr-form" className="pr-form" onSubmit={handleSubmit}>
                 <div className="pr-field">
@@ -129,9 +118,7 @@ export default function PatientRegistration() {
                       <option value="Female">Female</option>
                       <option value="Male">Male</option>
                       <option value="Other">Other</option>
-                      <option value="Prefer not to say">
-                        Prefer not to say
-                      </option>
+                      <option value="Prefer not to say">Prefer not to say</option>
                     </select>
                   </div>
                 </div>

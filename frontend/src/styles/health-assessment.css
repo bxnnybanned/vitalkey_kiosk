@@ -1,0 +1,174 @@
+@layer components {
+  .ha-root {
+    @apply min-h-screen flex items-center justify-center p-6;
+    background:
+      radial-gradient(900px 280px at 10% 8%, #e0e7ff 0%, transparent 65%),
+      radial-gradient(1100px 380px at 90% 92%, #dbeafe 0%, transparent 70%),
+      linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  }
+
+  .ha-frame {
+    @apply w-full max-w-6xl;
+  }
+
+  .ha-card-shell {
+    @apply rounded-[2rem] border border-slate-200/80 bg-white/85 shadow-2xl backdrop-blur;
+  }
+
+  .ha-topbar {
+    @apply flex items-center justify-between rounded-t-[2rem] bg-blue-700 px-6 py-4 text-white;
+  }
+
+  .ha-user {
+    @apply flex items-center gap-3;
+  }
+
+  .ha-avatar {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-blue-300 bg-blue-500 text-sm font-bold;
+  }
+
+  .ha-name {
+    @apply text-lg font-semibold;
+  }
+
+  .ha-time {
+    @apply text-sm text-blue-100;
+  }
+
+  .ha-body {
+    @apply p-6 md:p-8;
+  }
+
+  .ha-title {
+    @apply text-4xl font-black tracking-tight text-slate-900;
+  }
+
+  .ha-subtitle {
+    @apply mt-1 text-sm text-slate-500;
+  }
+
+  .ha-grid {
+    @apply mt-6 grid grid-cols-2 gap-4 md:grid-cols-3;
+  }
+
+  .ha-card {
+    @apply rounded-3xl border bg-white p-4 text-left shadow-sm transition;
+    @apply hover:-translate-y-0.5 hover:shadow-md;
+    min-height: 170px;
+  }
+
+  .ha-icon {
+    @apply inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-white/50 bg-white/75 text-slate-700;
+  }
+
+  .ha-icon svg {
+    @apply h-8 w-8;
+  }
+
+  .ha-label {
+    @apply mt-6 block text-2xl font-extrabold leading-tight text-slate-900;
+    font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+  }
+
+  .ha-pill {
+    @apply mt-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-500;
+  }
+
+  .ha-card.is-done .ha-pill {
+    @apply bg-emerald-100 text-emerald-700;
+  }
+
+  .ha-card--amber {
+    @apply border-amber-300 bg-amber-50;
+  }
+
+  .ha-card--rose {
+    @apply border-rose-300 bg-rose-50;
+  }
+
+  .ha-card--slate {
+    @apply border-slate-300 bg-slate-50;
+  }
+
+  .ha-card--violet {
+    @apply border-violet-300 bg-violet-50;
+  }
+
+  .ha-card--mint {
+    @apply border-emerald-300 bg-emerald-50;
+  }
+
+  .ha-card--sky {
+    @apply border-sky-300 bg-sky-50;
+  }
+
+  .ha-footer {
+    @apply mt-6 flex items-center justify-between gap-4;
+  }
+
+  .ha-progress {
+    @apply text-xl font-bold text-slate-500;
+  }
+
+  .ha-continue {
+    @apply min-w-[220px] rounded-2xl bg-blue-600 px-6 py-4 text-lg font-bold text-white transition;
+    @apply hover:bg-blue-700;
+  }
+
+  .ha-modal-backdrop {
+    @apply fixed inset-0 z-50 flex items-center justify-center bg-slate-900/45 p-4;
+  }
+
+  .ha-modal {
+    @apply w-full max-w-md rounded-3xl border border-slate-200 bg-white p-6 shadow-2xl;
+  }
+
+  .ha-modal-icon {
+    @apply inline-flex h-14 w-14 items-center justify-center rounded-2xl text-slate-700;
+  }
+
+  .ha-modal-icon svg {
+    @apply h-8 w-8;
+  }
+
+  .ha-modal-title {
+    @apply mt-4 text-2xl font-extrabold text-slate-900;
+  }
+
+  .ha-modal-subtitle {
+    @apply mt-1 text-sm text-slate-500;
+  }
+
+  .ha-modal-field {
+    @apply mt-5 block;
+  }
+
+  .ha-modal-field span {
+    @apply text-sm font-semibold text-slate-700;
+  }
+
+  .ha-modal-field input {
+    @apply mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 text-lg font-semibold text-slate-800 outline-none transition;
+    @apply focus:border-blue-500 focus:ring-2 focus:ring-blue-100;
+  }
+
+  .ha-modal-field small {
+    @apply mt-1 block text-xs text-slate-500;
+  }
+
+  .ha-modal-actions {
+    @apply mt-6 flex justify-end gap-3;
+  }
+
+  .ha-modal-btn {
+    @apply rounded-xl px-4 py-2 font-semibold transition;
+  }
+
+  .ha-modal-btn--ghost {
+    @apply border border-slate-300 bg-white text-slate-700 hover:bg-slate-50;
+  }
+
+  .ha-modal-btn--primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700;
+  }
+}

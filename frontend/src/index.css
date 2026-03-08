@@ -1,5 +1,9 @@
 @import "tailwindcss";
 @import "./styles/kiosk-home.css";
-@import "./styles/select-language.css";
 @import "./styles/terms.css";
+@import "./styles/visit-type.css";
+@import "./styles/patient-id-lookup.css";
 @import "./styles/patient-registration.css";
+@import "./styles/health-assessment.css";
+@import "./styles/measurement-step.css";
+@import "./styles/health-summary.css";

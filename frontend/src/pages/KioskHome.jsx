@@ -39,7 +39,6 @@ export default function KioskHome() {
     <div className="vk-root">
       <div className="vk-frame">
         <div className="vk-card" role="application" aria-label="VitalKey Kiosk">
-          {/* LEFT */}
           <section className="vk-left">
             <div className="vk-badge" aria-hidden="true">
               <span className="vk-badge-dot" />
@@ -53,7 +52,7 @@ export default function KioskHome() {
 
               <div className="vk-meta">
                 <span>{dayLabel}</span>
-                <span className="vk-meta-sep">•</span>
+                <span className="vk-meta-sep">|</span>
                 <span>{timeLabel}</span>
               </div>
             </div>
@@ -61,29 +60,20 @@ export default function KioskHome() {
             <div className="vk-line" aria-hidden="true" />
           </section>
 
-          {/* RIGHT */}
           <section className="vk-right">
             <div className="vk-right-top">
               <p className="vk-hint">TAP TO BEGIN</p>
 
-              <button
-                className="vk-start"
-                type="button"
-                onClick={() => navigate("/language")}
-              >
+              <button className="vk-start" type="button" onClick={() => navigate("/terms")}>
                 <span className="vk-start-icon" aria-hidden="true">
-                  ▶
+                  {">"}
                 </span>
                 <span>START</span>
               </button>
             </div>
 
             <div className="vk-right-bottom">
-              <div
-                className="vk-status"
-                role="status"
-                aria-label="System Online"
-              >
+              <div className="vk-status" role="status" aria-label="System Online">
                 <span className="vk-status-dot" aria-hidden="true" />
                 <span className="vk-status-text">System Online</span>
               </div>

@@ -1,0 +1,151 @@
+@layer components {
+  .pid-root {
+    @apply min-h-screen flex items-center justify-center p-6;
+    background:
+      radial-gradient(1200px 400px at 20% 5%, #dbeafe 0%, transparent 70%),
+      radial-gradient(1000px 500px at 90% 95%, #e0e7ff 0%, transparent 70%),
+      linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  }
+
+  .pid-frame {
+    @apply w-full max-w-5xl;
+  }
+
+  .pid-card {
+    @apply rounded-[2rem] border border-slate-200/80 bg-white/85 shadow-2xl backdrop-blur;
+  }
+
+  .pid-body {
+    @apply grid grid-cols-1 gap-6 p-6 md:grid-cols-[1.02fr_1.1fr] md:p-8;
+  }
+
+  .pid-left {
+    @apply rounded-3xl border border-slate-200 bg-slate-50 p-6;
+  }
+
+  .pid-right {
+    @apply rounded-3xl border border-blue-100 bg-blue-50/60 p-6;
+  }
+
+  .pid-title {
+    @apply text-4xl font-black tracking-tight text-slate-900;
+  }
+
+  .pid-subtitle {
+    @apply mt-1 text-base text-slate-500;
+  }
+
+  .pid-search-wrap {
+    @apply mt-4;
+  }
+
+  .pid-input {
+    @apply w-full rounded-2xl border border-slate-200 bg-white px-5 py-4 text-lg text-slate-700 outline-none transition;
+  }
+
+  .pid-input::placeholder {
+    @apply text-slate-400;
+  }
+
+  .pid-input:focus {
+    @apply border-blue-400 ring-4 ring-blue-100;
+  }
+
+  .pid-match {
+    @apply mt-4 w-full rounded-2xl border border-blue-100 bg-blue-50 px-4 py-3 text-left shadow-sm;
+    @apply flex items-center gap-3;
+  }
+
+  .pid-avatar {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-500 text-sm font-bold text-white;
+  }
+
+  .pid-match-copy {
+    @apply flex flex-1 flex-col;
+  }
+
+  .pid-match-name {
+    @apply text-2xl font-extrabold leading-tight text-slate-900;
+    font-size: 1.3rem;
+  }
+
+  .pid-match-sub {
+    @apply text-sm text-blue-600;
+  }
+
+  .pid-check {
+    @apply text-sm font-bold text-emerald-600;
+  }
+
+  .pid-hint {
+    @apply mt-3 text-sm text-slate-500;
+  }
+
+  .pid-pin-label {
+    @apply text-center text-xs font-semibold tracking-[0.22em] text-blue-700;
+  }
+
+  .pid-pin-box {
+    @apply mt-2 flex min-h-[64px] items-center rounded-2xl border border-blue-100 bg-white px-4 text-3xl font-bold tracking-[0.25em] text-blue-700;
+    word-break: break-all;
+  }
+
+  .pid-pin-row {
+    @apply mt-2 flex items-stretch gap-2;
+  }
+
+  .pid-pin-row .pid-pin-box {
+    @apply mt-0 flex-1;
+  }
+
+  .pid-pin-placeholder {
+    @apply inline-flex items-center rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 px-3 py-2 text-sm font-medium tracking-normal text-blue-700;
+  }
+
+  .pid-visibility {
+    @apply min-w-[84px] rounded-2xl border border-blue-100 bg-white px-3 text-sm font-semibold text-blue-700 transition hover:bg-blue-50 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .pid-id-guide {
+    @apply mt-2 text-center text-xs text-slate-500;
+  }
+
+  .pid-keypad {
+    @apply mt-4 grid grid-cols-3 gap-3;
+  }
+
+  .pid-key {
+    @apply rounded-2xl border border-slate-200 bg-white py-3 text-3xl font-extrabold text-slate-900 shadow-sm transition;
+    @apply hover:-translate-y-0.5 hover:bg-slate-50 active:translate-y-0;
+  }
+
+  .pid-key-del {
+    @apply text-xl font-bold text-rose-600;
+  }
+
+  .pid-key-clear {
+    @apply text-xl font-bold text-slate-600;
+  }
+
+  .pid-actions {
+    @apply mt-5 flex gap-3;
+  }
+
+  .pid-btn {
+    @apply w-full rounded-2xl px-5 py-3 text-lg font-semibold transition;
+  }
+
+  .pid-btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 disabled:bg-slate-300 disabled:cursor-not-allowed;
+  }
+
+  .pid-btn-secondary {
+    @apply border border-slate-300 bg-white text-slate-700 hover:bg-slate-50;
+  }
+
+  @media (max-width: 767px) {
+    .pid-pin-box {
+      @apply text-2xl tracking-[0.18em];
+    }
+  }
+}
