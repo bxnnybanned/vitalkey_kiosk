@@ -1,0 +1,27 @@
+@import "./styles/admin-signin.css";
+@import "./styles/admin-dashboard.css";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: "Manrope", "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #eaf0f8;
+  color: #11213f;
+}
+
+button,
+input {
+  font: inherit;
+}
